@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Random Site</title>
+</head>
+<body>
+    <div class="container" style="text-align: center; padding : 5%">
+        <h1>Random Site</h1>
+        <h3>Press the button for a Random number between 1 and 999</h3>
+        <button onclick="random()">Random</button>
+        <p id="randomnum"></p>
+        <script>
+            function random() {
+                var x = Math.floor(Math.random() * 999);
+                document.getElementById("randomnum").innerHTML = x;
+            }
+        </script>
+        <h3>Press the button to be directed to a random site</h3>
+        <button onclick="randomsite()">Random Site</button>
+        <script>
+            function randomsite() {
+                var sites = ["https://github.com/","https://github.com/micfun123/Simplex_bot","https://www.youtube.com/@MichaelMediaGroup"]
+                var x = Math.floor(Math.random() * sites.length);
+                //redirect to random site
+                window.location.href = sites[x];
+                
+            }
+        </script>
+
+                
+
+    </div>
+    
+</body>
+</html>
